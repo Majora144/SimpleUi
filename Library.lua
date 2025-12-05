@@ -1411,11 +1411,12 @@ function Library:CreateWatermark(cfg)
 	local WatermarkText = Instance.new("TextLabel")
 	WatermarkText.Parent = Watermark
 	WatermarkText.BackgroundTransparency = 1
-	WatermarkText.Size = UDim2.new(1, 0, 1, 0)
+	WatermarkText.Size = UDim2.new(0, 0, 1, 0)
 	WatermarkText.Font = Config.FontBold
 	WatermarkText.Text = text
 	WatermarkText.TextColor3 = Colors.Text
 	WatermarkText.TextSize = 12
+	WatermarkText.AutomaticSize = Enum.AutomaticSize.X
 
 	local WatermarkObject = { Frame = Watermark, TextLabel = WatermarkText }
 	function WatermarkObject:Set(newText)
