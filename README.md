@@ -2,7 +2,7 @@
 
 ## Usage
 ```lua
-local Library = loadstring(game:HttpGet("URL_HERE"))()
+local Library = loadstring(game:HttpGet("SOURCE_URL_HERE"))() --https://raw.githubusercontent.com/Majora144/SimpleUi/refs/heads/main/Library.lua
 local Window = Library:CreateWindow({ Title, Keybind })
 local Tab = Window:CreateTab(Name)
 ```
