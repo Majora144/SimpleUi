@@ -4,7 +4,7 @@ Library.Flags = {}
 local TweenService = game:GetService("TweenService")
 local UserInputService = game:GetService("UserInputService")
 local TextService = game:GetService("TextService")
-local CoreGui = game:GetService("CoreGui")
+local CoreGui = gethui and gethui() or cloneref and cloneref(game:GetService("CoreGui")) or game:GetService("CoreGui")
 
 local Colors = {
 	Background = Color3.fromRGB(18, 18, 22),
