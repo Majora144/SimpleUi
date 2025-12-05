@@ -160,7 +160,7 @@ SettingsTab:CreateButton({
 })
 
 Library:CreateWatermark({
-    Text = "Example Script | v1.0",
+    Text = "Example Script",
     Anchor = "TopLeft"
 })
 
