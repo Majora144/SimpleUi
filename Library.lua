@@ -205,7 +205,6 @@ function Library:CreateWindow(config)
 		TabButton.Parent = TabHolder
 		TabButton.BackgroundColor3 = Colors.Element
 		TabButton.BorderSizePixel = 0
-		TabButton.Size = UDim2.new(0, 70, 1, 0)
 		TabButton.AutoButtonColor = false
 		TabButton.Font = Config.Font
 		TabButton.Text = name
@@ -213,6 +212,17 @@ function Library:CreateWindow(config)
 		TabButton.TextSize = 13
 		corner(TabButton)
 
+		local tabChildren = TabHolder:GetChildren()
+		local tabCount = 0
+		for _, c in tabChildren do
+		    if c:IsA("TextButton") then tabCount = tabCount + 1 end
+		end
+		for _, c in tabChildren do
+		    if c:IsA("TextButton") then
+		        c.Size = UDim2.new(1 / tabCount, 0, 1, 0)
+		    end
+		end
+			
 		TabButton.MouseEnter:Connect(function()
 			if not Tab.Active then
 				tween(TabButton, nil, { BackgroundColor3 = Colors.ElementHover })
