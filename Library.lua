@@ -219,7 +219,7 @@ function Library:CreateWindow(config)
 		end
 		for _, c in tabChildren do
 		    if c:IsA("TextButton") then
-		        c.Size = UDim2.new(1 / tabCount, 0, 1, 0)
+		        c.Size = UDim2.new(1 / tabCount, -2, 1, 0)
 		    end
 		end
 			
